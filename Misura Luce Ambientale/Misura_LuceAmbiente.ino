@@ -21,10 +21,10 @@ void setup() {
     while (1);
   }
   Serial.println("ci siamo!");  
-  SD.remove("dati.txt"); //Cancello il precedente file (se presente)
+  SD.remove("DATI_LUCE.TXT"); //Cancello il precedente file (se presente)
   delay(5000);
     Serial.print("Inizio a scrivere sul file di testo ...");
-  dati = SD.open("dati.txt", FILE_WRITE); //Apro il file, che verrà chiuso a fine misurazione. Faccio così per evitare di attendere che il singolo dato vada scritto sul file ad ogni iterazione, causando eccessivo stress sulla micro SD
+  dati = SD.open("DATI_LUCE.TXT", FILE_WRITE); //Apro il file, che verrà chiuso a fine misurazione. Faccio così per evitare di attendere che il singolo dato vada scritto sul file ad ogni iterazione, causando eccessivo stress sulla micro SD
   //se ho creato/trovato il file, scrivo un valore al secondo per 24h
   digitalWrite(LED_BUILTIN, HIGH); //Durante la misurazione, tengo acceso il led integrato sulla board
   if (dati) {
