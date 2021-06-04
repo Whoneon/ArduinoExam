@@ -35,7 +35,7 @@ void setup() {
   }
     dati.close(); //Chiudo il file e lo salvo...
     digitalWrite(LED_BUILTIN, LOW); //...spengo il led...
-    Serial.println("done."); //...e fine!
+    Serial.println("fine."); //...e fine!
   } 
   else {
     Serial.println("errore nell'aprire il file!");
